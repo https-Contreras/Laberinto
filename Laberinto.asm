@@ -12,6 +12,7 @@ mover_jugador_asm:
     push rbp
     mov rbp, rsp
 
+    
     ; 1. Calcular nueva posicion segun direccion
     cmp r9b, 'W'
     je .arriba
@@ -23,9 +24,11 @@ mover_jugador_asm:
     je .derecha
     jmp .invalido
 
+
 .arriba:
     dec edx     ; fila--
     jmp .verificar
+
 
 .abajo:
     inc edx     ; fila++
